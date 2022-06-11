@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --background-image:url("backgrounds/00.jpg");
+    --terminal-height: 50vh;
+    --terminal-width: 65vw;
+    --terminal-padding: 30px;
+    --terminal-border-radius:16px;
+
+    --font-family: 'Poppins', sans-serif;
+    --font-size: 1rem;
+
+    --terminal-opacity: 0.8;
+    --bg-color: rgba(26,26,26,var(--terminal-opacity));
+    --fg-color: #fafafa;
+    --primary-color:#6960D6;
+    --secondary-color:#4D299D;
+    --tertiary-color:#340696;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    color: var(--fg-color);
+
+    background-image: var(--background-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flex {
+    display: flex;
+}
+
+p{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    max-width: 90%;
+    overflow-wrap: break-word;
+}
+
+.accent_text {
+    color: var(--primary-color);
+}
+::-webkit-scrollbar {
+    width: 27px;
+    
+}
+
+::-webkit-scrollbar-track {
+    border: solid 10px transparent;
+    border-radius: var(--terminal-border-radius);
+}
+
+::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 10px 10px var(--primary-color);
+    border: solid 10px transparent;
+    border-radius: var(--terminal-border-radius);
+}
+
+
+.terminal {
+    padding: var(--terminal-padding);
+    background-color: var(--bg-color);
+    height: var(--terminal-height);
+    width: var(--terminal-width);
+    border-radius: 16px;
+
+    overflow-y: auto;
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.7px);
+    -webkit-backdrop-filter: blur(8.7px);
+}
+
+#input_line, .input_line {
+    display: flex;
+}
+
+.input {
+    all: initial;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    color: var(--fg-color);
+    caret-color: var(--tertiary-color);
+    width: 100%;
+    margin-top: 8px;
+
+}
+
+#line_prefix {
+    display: flex;
+}
+
+#username, .username {
+    color: var(--primary-color);
+}
+
+#username_suffix, .username_suffix {
+    color: var(--secondary-color);
+}
+
+#username, #username_suffix, .username, .username_suffix {
+    margin-right: 10px;
+}
+
+.help_table_key {
+    min-width:20ch;
+    vertical-align:initial;
+}
+
+.text_input {
+    position: relative;
+    width: 100%;
+} 
+
+#autocomplete {
+    position: absolute;
+    z-index: 100000;
+    color: rgba(255, 255, 255, 0.6);
+}

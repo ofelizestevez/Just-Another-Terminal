@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startpage</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="color_palettes.js?v=0.9"></script>
+    <script src="commands.js?v=0.9"></script>
+    <script src="pre_main.js?v=0.9"></script>
+</head>
+<body>
+    
+    <div class="terminal">
+
+        <div id="output"></div>
+        <div id="input_line" onclick="document.getElementById('input').focus()">
+            <div id="line_prefix">
+                <p id="username">user</p>
+                <p id="username_suffix">~></p>
+            </div>
+            <div class="text_input">
+                <p id="autocomplete" class="autocomplete"></p>
+                <input type="text" class="input" id = "input" autocomplete="off">
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="main.js?v=0.9"></script>
+</body>
+</html>
